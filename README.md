@@ -2,9 +2,7 @@
 
 ```
 this is a body. use 
-  ``` 
-  whatever and then
-  ``` again
+  ``` (yourtexthere) and then ``` again
 
 ```
 
