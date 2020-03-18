@@ -91,28 +91,22 @@ dictionary = {x : y for x, y in zip(name_list, num_list)}
 
 [go to top](#top)
 
+dictionaryname.**method**(**parameters**) to perform **Description**
+```
+Method   Parameters      Description
+get      keyname         returns the itemname in dictionary that is associated with keyname. If no value found, return None
+items    none            gets a list of key-value pairs
+keys     none            gets a list of keys
+values   none            gets a list of values
+update   {"Key":"Value"} add a key (merges another dictionary)
+```
+
 ```python
 # List functions work!
 del dictionary_name[<key>]
 len()
 pop(key)
 clear() # Empties the entire dictionary
-
-# Get values
-species_dictionary.get("methylDragon") # Returns Dragon
-# This works the same as [], except, if no value is found, it defaults to None as opposed to throwing an error
-
-# Get a list of key-value pairs
-species_dictionary.items()
-
-# Get a list of keys
-species_dictionary.keys()
-
-# Get a list of values
-species_dictionary.values()
-
-# Add a key (Update merges another dictionary!)
-species_dictionary.update({"Key":"Value"})
 
 # Add multiple keys (As above, update merges another dictionary)
 species_dictionary.update({"Key_1":"Value_1", "Key_2":"Value_2"})
