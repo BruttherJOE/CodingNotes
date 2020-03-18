@@ -47,7 +47,7 @@ For only 49.00 dollars!
 ```
 
 
-
+## Dictionaries cr @methyldragon
 ### 2.10 Dictionaries
 
 [go to top](#top)
