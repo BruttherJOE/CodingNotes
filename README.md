@@ -8,5 +8,5 @@ this is a body. use
   ``` (yourtexthere) and then ``` again
 
 ```
-
+for pictures, create a file called assets. stuff the pictures in. then you reference the picture from within the md file.
 
