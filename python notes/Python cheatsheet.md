@@ -2,8 +2,8 @@
 
 This is a cheat sheet prepared and used by myself in Digital world.
 
-## Chapter 1
-### String Methods/Functions
+## Chapter 1 : Strings
+### 1.1 String Methods/Functions
 stringname.method(parameters) to do whatever the description mentions
 
 Commands:
