@@ -45,3 +45,102 @@ print(txt.format(price = 49))
 _____
 For only 49.00 dollars!
 ```
+
+
+
+### 2.10 Dictionaries
+
+[go to top](#top)
+
+Dictionaries are made up of values with a **UNIQUE** key for each value! It's basically a keyed list.
+
+> You can't join them like you can with lists though!
+
+```python
+# Define a dictionary using {}
+species_dictionary = {"Bob" : "Human",
+                     "methylDragon" : "Dragon",
+                     "haojun" : "Snake"}
+# The things to the left of the colon are the keys, and the ones on the right are the values
+
+# To call an entry by key
+species_dictionary["methylDragon"] # Returns Dragon
+
+# To reassign values (Think lists, but with keys instead of indexes!)
+species_dictionary["haojun"] = "Human"
+
+# Empty dictionary
+empty_dictionary = {}
+```
+
+#### **Dictionary Comprehensions**
+
+```python
+# Just some examples for reference
+# {key:value for item in list if conditional}
+
+name_list = ["a", "b", "c", "d", "e"]
+num_list = [1, 2, 3, 4, 5]
+
+dictionary = {x : y for x, y in zip(name_list, num_list)}
+```
+
+
+
+### 2.11 Dictionary Methods
+
+[go to top](#top)
+
+```python
+# List functions work!
+del dictionary_name[<key>]
+len()
+pop(key)
+clear() # Empties the entire dictionary
+
+# Get values
+species_dictionary.get("methylDragon") # Returns Dragon
+# This works the same as [], except, if no value is found, it defaults to None as opposed to throwing an error
+
+# Get a list of key-value pairs
+species_dictionary.items()
+
+# Get a list of keys
+species_dictionary.keys()
+
+# Get a list of values
+species_dictionary.values()
+
+# Add a key (Update merges another dictionary!)
+species_dictionary.update({"Key":"Value"})
+
+# Add multiple keys (As above, update merges another dictionary)
+species_dictionary.update({"Key_1":"Value_1", "Key_2":"Value_2"})
+
+# Add a key (alternative) (Though it isn't an explicit method call...)
+species_dictionary["Smaug"] = "Dragon"
+
+# Set a default response to a particular key query if the key is not found
+species_dictionary.setdefault("methylDragon", "rad_dragon")
+species_dictionary.setdefault("Toothless", "dumb_dragon")
+
+species_dictionary["methylDragon"] # returns "Dragon" (as the key was found)
+species_dictionary["Toothless"] # returns "dumb_dragon"
+```
+
+Example: Putting it all together!
+
+```python
+# Return a list of numbers that appear most frequently in an input list
+# Show multiple if tied
+# Eg. Input: [1, 1, 2, 2, 3]
+# Output: [1, 2]
+
+def most_frequent(lst):
+    count_dict = {}
+    for i in lst:
+        if count_dict.get(i) == None:
+            count_dict.update({i : lst.count(i)})
+    return [x for x in count_dict.keys() if count_dict[x] == max(count_dict.values())]
+```
+
