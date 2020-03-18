@@ -19,4 +19,22 @@ count       itemname   Returns the number of occurrences of item
 replace     old, new   Replaces all occurrences of old substring with new
 find        itemname   Returns the leftmost index where the substring item is found, or -1 if not found
 ```
+other useful functions that I do not have the time to google, worry about, or include:
 
+Commands:
+```
+Print
+Len
+Range
+List
+Sorted
+Map
+Lambda
+Str
+Repr
+In
+input
+enumerate
+file
+type()
+```
