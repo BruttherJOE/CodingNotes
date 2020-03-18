@@ -38,3 +38,10 @@ enumerate
 file
 type()
 ```
+### 1.2 String format() Method
+```
+txt = "For only {price:.2f} dollars!"
+print(txt.format(price = 49))
+_____
+For only 49.00 dollars!
+```
