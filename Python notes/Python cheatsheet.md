@@ -31,8 +31,10 @@ other useful functions that I do not have the time to google, worry about, or in
 
 Commands:
 ```
-Print
-Len (len(ls) to get length of list)
+Method                   Description
+____________________________________________________________
+Print                    Print ur mom
+Len                      (len(ls) to get length of list)
 Range
 List
 Sorted
@@ -85,14 +87,14 @@ def stopwatch_fn:
 ```
 
 
-## Dictionaries cr @methyldragon
+## CHAPTER 3 Dictionaries cr @methyldragon
 ### 3.10 Dictionaries
 
 [go to top](#top)
 
-Dictionaries are made up of values with a **UNIQUE** key for each value! It's basically a keyed list.
+Dictionaries are made up of values with a **UNIQUE** key for each value. It's basically a keyed list.
 
-> You can't join them like you can with lists though!
+> However, you can't join them like you can with lists
 
 ```python
 # Define a dictionary using {}
@@ -102,7 +104,8 @@ species_dictionary = {"Bob" : "Human",
 # The things to the left of the colon are the keys, and the ones on the right are the values
 
 # To call an entry by key
-species_dictionary["methylDragon"] # Returns Dragon
+Method                                Description
+species_dictionary["methylDragon"]    Returns Dragon
 
 # To reassign values (Think lists, but with keys instead of indexes!)
 species_dictionary["haojun"] = "Human"
