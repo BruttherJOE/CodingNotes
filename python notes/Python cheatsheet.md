@@ -73,10 +73,14 @@ time.time() usage
 
 ```
 usage: set a start time and also an end time. this allows u to time a certain amt of actions in ur code.
-start_time = time.time()
-    - YOUR CODE HERE -
-end_time = time.time()
-end_time = start_time - end_time
+
+import time
+def stopwatch_fn:
+  start_time = time.time()
+      - YOUR CODE HERE -
+  end_time = time.time()
+  total_time_taken = start_time - end_time
+  return total_time_taken
 ```
 
 
