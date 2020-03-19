@@ -2,6 +2,13 @@
 
 This is a cheat sheet prepared and used by myself in Digital world.
 
+## Contents
+  1. Strings
+  2. Lists (in construction)
+  3. Dictionaries (in construction)
+  4. OOP (in construction)
+
+
 ## Chapter 1 : Strings
 ### 1.1 String Methods/Functions
 stringname.method(parameters) to do whatever the description mentions
@@ -42,13 +49,13 @@ type()
 ```
 txt = "For only {price:.2f} dollars!"
 print(txt.format(price = 49))
-_____
+_________________________________
 For only 49.00 dollars!
 ```
 
 
 ## Dictionaries cr @methyldragon
-### 2.10 Dictionaries
+### 3.10 Dictionaries
 
 [go to top](#top)
 
@@ -87,7 +94,7 @@ dictionary = {x : y for x, y in zip(name_list, num_list)}
 
 
 
-### 2.11 Dictionary Methods
+### 3.11 Dictionary Methods
 
 [go to top](#top)
 
@@ -138,3 +145,5 @@ def most_frequent(lst):
     return [x for x in count_dict.keys() if count_dict[x] == max(count_dict.values())]
 ```
 
+## Chapter 4
+### OOP
