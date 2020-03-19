@@ -1,6 +1,10 @@
 # This is a title
-for titles, do # (yourtitlehere)
-for subtitles, do ## (yoursubtitlehere)
+
+for titles, do # (yourtitlehere).
+for subtitles, do ## (yoursubtitlehere).
+for subsubtitles, do ### (yoursubsubtitlehere).
+and so on and so forth
+
 ## this is a subtitle
 
 ```
