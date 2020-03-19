@@ -3,7 +3,7 @@
 This is a cheat sheet prepared and used by myself in Digital world.
 
 ## Contents
-  1) Strings
+  1) Strings  
   1.5) Useful Imports
   2) Lists (in construction)
   3) Dictionaries (in construction)
@@ -57,7 +57,8 @@ For only 49.00 dollars!
 
 ## 1.5 Useful Imports
 
-import time
+import time  
+time.*method* (parameters) to do **Description**
 
 ```
 Method    Parameters      Description
