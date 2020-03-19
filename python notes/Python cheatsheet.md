@@ -66,19 +66,19 @@ time      None            Gets time since epoch (the start of universe)
 localtime None
 asctime   None            gives you current clock time on ur bottom right screen
 
-
 """
+
+
 time.time() usage
 
+  """
+  usage: set a start time and also an end time. this allows u to time a certain amt of actions in ur code.
+  start_time = time.time()
+    - YOUR CODE HERE -
+  end_time = time.time()
 
-"""
-usage: set a start time and also an end time. this allows u to time a certain amt of actions in ur code.
-start_time = time.time()
-  - YOUR CODE HERE -
-end_time = time.time()
-
-end_time = start_time - end_time
-"""
+  end_time = start_time - end_time
+  """
 
 
 ## Dictionaries cr @methyldragon
