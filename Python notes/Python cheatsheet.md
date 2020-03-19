@@ -64,8 +64,8 @@ time.*method* (parameters) to do **Description**
 Method    Parameters      Description
 
 time      None            Gets time since epoch (the start of universe)
-localtime None
-asctime   None            gives you current clock time on ur bottom right screen
+localtime None            returns current year, month, day in month, hour, min, sec, wday, yday... as a list
+asctime   None            gives you current clock time on ur bottom right screen. returns as a str. splittable by spaces.
 
 ```
 
