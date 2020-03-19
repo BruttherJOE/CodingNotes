@@ -4,6 +4,7 @@ This is a cheat sheet prepared and used by myself in Digital world.
 
 ## Contents
   1. Strings
+  1.5 Useful Imports
   2. Lists (in construction)
   3. Dictionaries (in construction)
   4. OOP (in construction)
@@ -52,6 +53,31 @@ print(txt.format(price = 49))
 _________________________________
 For only 49.00 dollars!
 ```
+
+
+## 1.5 Useful Imports
+
+import time
+
+"""
+Method    Parameters      Description
+
+time      None            Gets time since epoch (the start of universe)
+
+localtime None
+asctime   None            gives you current clock time on ur bottom right screen
+
+
+"""
+time.time() usage
+"""
+usage: set a start time and also an end time. this allows u to time a certain amt of actions in ur code.
+start_time = time.time()
+  - YOUR CODE HERE -
+end_time = time.time()
+
+end_time = start_time - end_time
+"""
 
 
 ## Dictionaries cr @methyldragon
