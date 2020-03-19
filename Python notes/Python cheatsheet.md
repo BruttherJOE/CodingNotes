@@ -32,7 +32,7 @@ other useful functions that I do not have the time to google, worry about, or in
 Commands:
 ```
 Print
-Len
+Len (len(ls) to get length of list)
 Range
 List
 Sorted
