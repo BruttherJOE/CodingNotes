@@ -4,7 +4,8 @@ for titles, do # (yourtitlehere)
 for subtitles, do ## (yoursubtitlehere)  
 for subsubtitles, do ### (yoursubsubtitlehere)  
 and so on and so forth  
-
+  
+to force line return (new line), add ("  ") double spaces at the end of a line
 ## this is a subtitle
 
 ```
