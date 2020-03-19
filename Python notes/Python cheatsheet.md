@@ -85,9 +85,9 @@ def stopwatch_fn:
   total_time_taken = start_time - end_time
   return total_time_taken
 ```
+## CHAPTER 2 - LISTS
 
-
-## CHAPTER 3 Dictionaries cr @methyldragon
+## CHAPTER 3 - DICTIONARIES cr @methyldragon
 ### 3.10 Dictionaries
 
 [go to top](#top)
@@ -180,7 +180,9 @@ def most_frequent(lst):
 ```
 
 ## Chapter 4
-### OOP
+### OOP (introduction)
+an introduction will be placed here.
+
 
   ### 4.1 Classes
 
