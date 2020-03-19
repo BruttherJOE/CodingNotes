@@ -55,7 +55,7 @@ For only 49.00 dollars!
 ```
 
 
-## 1.5 Useful Imports
+### 1.5 Useful Imports
 
 import time  
 time.*method* (parameters) to do **Description**
@@ -178,3 +178,14 @@ def most_frequent(lst):
 
 ## Chapter 4
 ### OOP
+
+  ### 4.1 Classes
+
+  ### 4.2 Special Methods
+Some class methods have names starting and ending with a double underscore. These methods allow a special syntax in the program and are called special methods. The constructor __init__ is one example.  
+
+List of special methods:
+```
+  __init__
+  __call__
+```
