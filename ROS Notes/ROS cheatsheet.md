@@ -6,13 +6,16 @@ This is a cheat sheet prepared and used by myself.
 A tool for displaying debug information about ROS topics, including publishers, subscribers, publishing rate, and messages.
 
 Commands:
+rostopic **Method** to do **Description**
 ```
-rostopic bw
-rostopic echo
-rostopic hz
-rostopic list
-rostopic pub
-rostopic type
-rostopic find       -- find topics by type
+Method          Description
+__________________________________
+bw
+echo
+hz
+list
+pub
+type
+find            find topics by type
 ```
 
