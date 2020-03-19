@@ -87,6 +87,30 @@ def stopwatch_fn:
 ```
 ## CHAPTER 2 - LISTS
 
+list commands
+listname.*Method*(Parameters) to do Description
+
+```
+Method    Parameters   Description
+append    itemname     adds itemname to listname
+index     itemname     returns index of position of itemname
+
+
+```
+
+
+For the below, *Method*(listname) to do Description
+
+```
+Method       Description
+len          returns length of the list in int form
+max          returns max of the list
+min          returns min of the list
+```
+
+
+
+
 ## CHAPTER 3 - DICTIONARIES cr @methyldragon
 ### 3.10 Dictionaries
 
