@@ -25,7 +25,7 @@ strip       none       Returns string with all spaces " " removed
 split       itemname   Returns string, split by itemname with a comma
 count       itemname   Returns the number of occurrences of item
 replace     old, new   Replaces all occurrences of old substring with new
-find        itemname   Returns the leftmost index where the substring item is found, or -1 if not found
+find        itemname   Returns the leftmost index where itemname is found, or -1 if not found
 ```
 other useful functions that I do not have the time to google, worry about, or include:
 
@@ -94,7 +94,7 @@ listname.*Method*(Parameters) to do Description
 Method    Parameters   Description
 append    itemname     adds itemname to listname
 index     itemname     returns index of position of itemname
-
+reverse   none         reverses the list
 
 ```
 
