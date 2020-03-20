@@ -7,7 +7,7 @@ This is a cheat sheet prepared and used by myself in Digital world.
   1.5) Useful Imports
   2) Lists (in construction)
   3) Dictionaries (in construction)
-  4) OOP (in construction)
+  4) OOP (in construction)  
   X) misc
 
 
