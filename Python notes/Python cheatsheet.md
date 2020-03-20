@@ -8,6 +8,7 @@ This is a cheat sheet prepared and used by myself in Digital world.
   2) Lists (in construction)
   3) Dictionaries (in construction)
   4) OOP (in construction)
+  X) misc
 
 
 ## Chapter 1 : Strings
@@ -218,3 +219,9 @@ List of special methods:
   __init__
   __call__
 ```
+
+
+## Chapter X - Misc
+
+
+diff btw frm math imp * and imp math
