@@ -16,7 +16,7 @@ stringname.method(parameters) to do whatever the description mentions
 
 Commands:
 ```
-Method      Parameters Description
+!Method      Parameters Description
 
 upper       none       Returns string in all uppercase
 lower       none       Returns string in all lowercase
