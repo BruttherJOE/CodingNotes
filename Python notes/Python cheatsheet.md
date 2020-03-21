@@ -1,6 +1,6 @@
 # Python Cheatsheet
 
-This is a cheat sheet prepared and used by myself in Digital world.
+This is a cheat sheet prepared and used by myself in Digital world.  
 Author : BruttherJOE
 
 ## Contents
@@ -14,8 +14,7 @@ Author : BruttherJOE
 
 ## Chapter 1 : Strings
 ### 1.1 String Methods/Functions
-> stringname.method(parameters) 
-to do whatever the description mentions
+stringname.method(parameters) to do whatever the description mentions
 
 Commands:
 
@@ -119,15 +118,19 @@ min          returns min of the list
 
 [go to top](#top)
 
-Dictionaries are made up of values with a **UNIQUE** key for each value. It's basically a keyed list.
+Dictionaries are made up of values with **UNIQUE** keys for every value. It's basically a keyed list.  
+Keys are immutable. This means that they cannot be changed. This is because the value will get confused and kill itself.
 
-> However, you can't join them like you can with lists
+> You can't join dictionaries like you can with lists
 
 ```python
 # Define a dictionary using {}
 species_dictionary = {"Bob" : "Human",
                      "methylDragon" : "Dragon",
                      "haojun" : "Snake"}
+```
+
+```
 # The things to the left of the colon are the keys, and the ones on the right are the values
 
 # To call an entry by key
