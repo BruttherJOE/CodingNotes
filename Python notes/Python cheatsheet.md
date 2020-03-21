@@ -64,7 +64,7 @@ import time
 time.*method* (parameters) to do **Description**
 
 
-Method    Parameters      Description
+Method  |  Parameters  |    Description
 ----------|------------|-----------------
 time      |None        |    Gets time since epoch (the start of universe)
 localtime |None        |    returns current year, month, day in month, hour, min, sec, wday, yday... as a list
