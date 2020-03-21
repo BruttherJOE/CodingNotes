@@ -1,3 +1,9 @@
+# MD guide
+author : BruttherJOE
+
+a simple guide on how to use md for text formatting.  
+md is useful and comes naturally to me for making notes.
+
 # This is a title
 
 for titles, do # (yourtitlehere)  
@@ -35,16 +41,12 @@ Content from cell 1 | Content from cell 2
 Content in the first column | Content in the second column
 
 
-### Highlighting
-== Highlight ==
+### Inline code
+
 `inline code`
+
+
 ```
 `this inlines the code`
 ```
 
-
-```
-
-```
-== This is highlighted ==
-```
