@@ -119,12 +119,12 @@ min          returns min of the list
 [go to top](#top)
 
 Dictionaries are made up of values with **UNIQUE** keys for every value. It's basically a keyed list.  
-Keys are immutable. This means that they cannot be changed. This is because the value will get confused and kill itself.
+Keys are immutable. This means that they cannot be changed. This is because the value will get confused and kill itself.  
 
-> You can't join dictionaries like you can with lists
+> You can't join dictionaries like you can with lists  
 
-Dictionaries are defined by {}.
-This is an empty dictionary :
+Dictionaries are defined by {}.  
+This is an empty dictionary :  
 `dictionary = {}`
 
 ```python
