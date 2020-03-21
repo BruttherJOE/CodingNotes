@@ -16,8 +16,8 @@ This is a cheat sheet prepared and used by myself in Digital world.
 stringname.method(parameters) to do whatever the description mentions
 
 Commands:
-```
-Method      Parameters Description
+```diff
+! Method      Parameters Description
 
 upper       none       Returns string in all uppercase
 lower       none       Returns string in all lowercase
