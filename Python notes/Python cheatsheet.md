@@ -123,11 +123,14 @@ Keys are immutable. This means that they cannot be changed. This is because the 
 
 > You can't join dictionaries like you can with lists
 
+Dictionaries are defined by {}.
+This is an empty dictionary :
+`dictionary = {}`
+
 ```python
-# Define a dictionary using {}
-species_dictionary = {"Bob" : "Human",
-                     "methylDragon" : "Dragon",
-                     "haojun" : "Snake"}
+dictionary = {"jack" : "good person",
+              "apple" : "fruit",
+              "haojun" : "Snake"}
 ```
 
 ```
