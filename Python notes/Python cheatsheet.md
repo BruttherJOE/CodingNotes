@@ -9,9 +9,9 @@ Author : BruttherJOE
   2) Lists (in construction)
   3) Dictionaries (in construction)
   4) OOP (in construction)  
-  5) misc
-    5.1) exception handling : try, except, finally
-    5.2) debugging
+  5) misc  
+    5.1) exception handling : try, except, finally  
+    5.2) debugging  
 
 
 ## Chapter 1 : Strings
