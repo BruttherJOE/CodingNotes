@@ -34,7 +34,7 @@ asctime   |None        |    gives you current clock time on ur bottom right scre
 time.time() usage  
 
 usage: set a start time and also an end time. this allows u to time a certain amt of actions in ur code.
-```
+```python
 import time
 def stopwatch_fn:
   start_time = time.time()
