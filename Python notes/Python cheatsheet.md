@@ -9,7 +9,9 @@ Author : BruttherJOE
   2) Lists (in construction)
   3) Dictionaries (in construction)
   4) OOP (in construction)  
-  X. misc
+  5) misc
+    5.1) exception handling : try, except, finally
+    5.2) debugging
 
 
 ## Chapter 1 : Strings
@@ -214,10 +216,11 @@ def most_frequent(lst):
 
 ## Chapter 4
 ### OOP (introduction)
-an introduction will be placed here.
+an introduction will be placed here when i has dat time
 
 
-  ### 4.1 Classes
+  ### 4.1 Classes  
+  ...  
 
   ### 4.2 Special Methods
 Some class methods have names starting and ending with a double underscore. These methods allow a special syntax in the program and are called special methods. The constructor __init__ is one example.  
@@ -229,7 +232,28 @@ List of special methods:
 ```
 
 
-## Chapter X - Misc
+## Chapter 5 - Misc
 
 
-diff btw frm math imp * and imp math
+diff btw frm math imp * and imp math  
+
+
+
+### Chapter 5.1 - Exception Handling
+
+When an error occurs, python will stop script and return an error message.  
+This does not always have to be for debugging.  
+This is mostly seen in robotics projects where there may be exceptions in I/O.
+
+`try` Block will let you test a block of code for errors  
+`except` Block will let you handle the error  
+`finally` will let you execute code regardless of try and except blocks  
+
+When `try` block raises an error, the `except` block will be executed  
+After `try` and `except`, regardless of whether `try` or `except` was executed, `finally` will be executed.
+
+`try`, `except`, `finally`, should all be on the same indentation. should. not too sure myself.
+
+Other keywords that will be documented next time :  
+`Else`  
+`raise`  
