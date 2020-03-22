@@ -239,21 +239,29 @@ diff btw frm math imp * and imp math
 
 
 
-### Chapter 5.1 - Exception Handling
+### Chapter 5.1 - Exception Handling  
+[go to top](#top)
 
+#### Introduction
 When an error occurs, python will stop script and return an error message.  
-This does not always have to be for debugging.  
-This is mostly seen in robotics projects where there may be exceptions in I/O.
+Sometimes, we still want to run the script even though there is an error.  
+Hence, we debug by introducing __Exception Handling__.
 
+This does not always have to be for debugging, but it is usually for debugging.  
+This is mostly seen in robotics projects where there may be exceptions in I/O.  
+In the case of robotics, sometimes, sensors do not return information.  
+
+#### Execution
 `try` Block will let you test a block of code for errors  
 `except` Block will let you handle the error  
 `finally` will let you execute code regardless of try and except blocks  
 
+#### Explanations
 When `try` block raises an error, the `except` block will be executed  
 After `try` and `except`, regardless of whether `try` or `except` was executed, `finally` will be executed.
 
 `try`, `except`, `finally`, should all be on the same indentation. should. not too sure myself.
 
 Other keywords that will be documented next time :  
-`Else`  
+`else`  
 `raise`  
