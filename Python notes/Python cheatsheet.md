@@ -33,9 +33,8 @@ asctime   |None        |    gives you current clock time on ur bottom right scre
   
 time.time() usage  
 
-```
 usage: set a start time and also an end time. this allows u to time a certain amt of actions in ur code.
-
+```
 import time
 def stopwatch_fn:
   start_time = time.time()
@@ -43,7 +42,7 @@ def stopwatch_fn:
   end_time = time.time()
   total_time_taken = start_time - end_time
   return total_time_taken
-  
+```
 
 ## Chapter 1 : Strings
 ### 1.1 String Methods/Functions
@@ -64,7 +63,8 @@ find     |  itemname | Returns the leftmost index where itemname is found, or -1
 
 other useful functions that I do not have the time to google, worry about, or include:
 
-Commands:
+Commands:  
+
 ```
 Method                   Description
 ____________________________________________________________
