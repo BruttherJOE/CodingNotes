@@ -4,8 +4,8 @@ This is a cheat sheet prepared and used by myself in Digital world.
 Author : BruttherJOE
 
 ## Contents
+  0) Useful Imports
   1) Strings  
-  1.5) Useful Imports
   2) Lists (in construction)
   3) Dictionaries (in construction)
   4) OOP (in construction)  
@@ -13,6 +13,37 @@ Author : BruttherJOE
     5.1) exception handling : try, except, finally  
     5.2) debugging  
 
+## Chapter 0 : Useful Imports  
+  ### Introduction to imports
+  will update when there is time.
+  
+  
+  ### import time
+  > time is useful for timing things in your program.  
+
+time.*method* (parameters) to do **Description**
+
+
+Method  |  Parameters  |    Description
+----------|------------|-----------------
+time      |None        |    Gets time since epoch (the start of universe)
+localtime |None        |    returns current year, month, day in month, hour, min, sec, wday, yday... as a list
+asctime   |None        |    gives you current clock time on ur bottom right screen. returns as a str. splittable by spaces.
+
+  
+time.time() usage  
+
+```
+usage: set a start time and also an end time. this allows u to time a certain amt of actions in ur code.
+
+import time
+def stopwatch_fn:
+  start_time = time.time()
+      - YOUR CODE HERE -
+  end_time = time.time()
+  total_time_taken = start_time - end_time
+  return total_time_taken
+  
 
 ## Chapter 1 : Strings
 ### 1.1 String Methods/Functions
@@ -61,34 +92,7 @@ For only 49.00 dollars!
 ```
 
 
-### 1.5 Useful Imports
 
-import time  
-time.*method* (parameters) to do **Description**
-
-
-Method  |  Parameters  |    Description
-----------|------------|-----------------
-time      |None        |    Gets time since epoch (the start of universe)
-localtime |None        |    returns current year, month, day in month, hour, min, sec, wday, yday... as a list
-asctime   |None        |    gives you current clock time on ur bottom right screen. returns as a str. splittable by spaces.
-
-
-
-
-time.time() usage
-
-```
-usage: set a start time and also an end time. this allows u to time a certain amt of actions in ur code.
-
-import time
-def stopwatch_fn:
-  start_time = time.time()
-      - YOUR CODE HERE -
-  end_time = time.time()
-  total_time_taken = start_time - end_time
-  return total_time_taken
-```
 ## CHAPTER 2 - LISTS
 
 list commands
