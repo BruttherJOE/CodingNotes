@@ -138,8 +138,10 @@ min          returns min of the list
 
 [go to top](#top)
 
-Dictionaries are made up of values with **UNIQUE** keys for every value. It's basically a keyed list.  
-Keys are immutable. This means that they cannot be changed. This is because the value will get confused and kill itself.  
+Dictionaries are made up of values with **UNIQUE** keys for every value.  
+It's basically a keyed list.  
+Keys are immutable. This means that they cannot be changed.  
+This is because the value will get confused and kill itself.  
 
 > You can't join dictionaries like you can with lists  
 
