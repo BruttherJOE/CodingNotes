@@ -44,6 +44,20 @@ def stopwatch_fn:
   return total_time_taken
 ```
 
+### import libdw
+
+#### Introduction
+this package was written by Oka Kurniawan, a professor from SUTD.  
+For windows, in anaconda prompt, or terminal on linux/IOS, to install, do  
+`pip install libdw`  
+this will install the package.  
+
+#### Documentations
+the full list is too long and there is already good documentations on it.  
+Here is the link : https://people.sutd.edu.sg/~oka_kurniawan/10_009/doc/html/libdw.html
+
+I will still be compiling the most useful stuff from this package in a table on this notes though, so stay tuned!  
+
 ## Chapter 1 : Strings
 ### 1.1 String Methods/Functions
 stringname.method(parameters) to do whatever the description mentions
