@@ -267,7 +267,6 @@ diff btw frm math imp * and imp math
 
 
 ### Chapter 5.1 - Exception Handling  
-[go to top](#top)
 
 #### Introduction
 When an error occurs, python will stop script and return an error message.  
@@ -295,11 +294,13 @@ Other keywords that will be documented next time :
 
 
 ### Chapter 5.3 Confusing arithmetic operators  
-[go to top](#top)
+
+[go to top](#top)  
+
 This chapter is here because I have forgotten these two before.  
   
 `%` the modulus function  
 Divides and returns the value of the remainder.
-
+  
 `//` the floor function  
 Divides and returns the integer value of the quotient. It throws away the decimal digits of the answer.
