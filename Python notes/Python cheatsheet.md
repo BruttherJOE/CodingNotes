@@ -59,7 +59,10 @@ Here is the link : https://people.sutd.edu.sg/~oka_kurniawan/10_009/doc/html/lib
 
 I will still be compiling the most useful stuff from this package in a table on this notes though, so stay tuned!  
 
-## Chapter 1 : Strings
+## Chapter 1 : Strings  
+  
+[go to top](#top)  
+
 ### 1.1 String Methods/Functions
 stringname.method(parameters) to do whatever the description mentions
 
@@ -108,7 +111,9 @@ For only 49.00 dollars!
 
 
 
-## CHAPTER 2 - LISTS
+## CHAPTER 2 - LISTS  
+  
+[go to top](#top)
 
 list commands
 listname.*Method*(Parameters) to do Description
@@ -135,8 +140,8 @@ min          returns min of the list
 
 
 ## CHAPTER 3 - DICTIONARIES cr @methyldragon
-### 3.10 Dictionaries
-
+### 3.10 Dictionaries  
+  
 [go to top](#top)
 
 Dictionaries are made up of values with **UNIQUE** keys for every value.  
@@ -184,8 +189,7 @@ dictionary = {x : y for x, y in zip(name_list, num_list)}
 
 
 
-### 3.11 Dictionary Methods
-
+### 3.11 Dictionary Methods  
 [go to top](#top)
 
 dictionaryname.**method**(**parameters**) to perform **Description**
@@ -235,7 +239,8 @@ def most_frequent(lst):
     return [x for x in count_dict.keys() if count_dict[x] == max(count_dict.values())]
 ```
 
-## Chapter 4
+## Chapter 4  
+[go to top](#top)
 ### OOP (introduction)
 an introduction will be placed here when i has dat time
 
@@ -253,7 +258,8 @@ List of special methods:
 ```
 
 
-## Chapter 5 - Misc
+## Chapter 5 - Misc  
+[go to top](#top)
 
 
 diff btw frm math imp * and imp math  
@@ -288,7 +294,8 @@ Other keywords that will be documented next time :
 `raise`  
 
 
-### Chapter 5.3 Confusing arithmetic operators
+### Chapter 5.3 Confusing arithmetic operators  
+[go to top](#top)
 This chapter is here because I have forgotten these two before.  
   
 `%` the modulus function  
