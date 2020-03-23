@@ -12,6 +12,7 @@ Author : BruttherJOE
   5) misc  
     5.1) exception handling : try, except, finally  
     5.2) debugging  
+    5.3) confusing arithmetic operators
 
 ## Chapter 0 : Useful Imports  
   ### Introduction to imports
@@ -285,3 +286,13 @@ After `try` and `except`, regardless of whether `try` or `except` was executed, 
 Other keywords that will be documented next time :  
 `else`  
 `raise`  
+
+
+### Chapter 5.3 Confusing arithmetic operators
+This chapter is here because I have forgotten these two before.  
+  
+`%` the modulus function  
+Divides and returns the value of the remainder.
+
+`//` the floor function  
+Divides and returns the integer value of the quotient. It throws away the decimal digits of the answer.
