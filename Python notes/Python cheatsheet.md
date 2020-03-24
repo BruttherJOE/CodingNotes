@@ -5,8 +5,13 @@ Author : BruttherJOE
 
 ## Contents
   0) Useful Imports
+    0.1) import time
+    0.2) import libdw
+    0.3) import math
   1) Strings  
   2) Lists (in construction)
+    2.1) List Commands
+    2.2) Enumerate
   3) Dictionaries (in construction)
   4) OOP (in construction)  
   5) misc  
@@ -145,8 +150,23 @@ max          returns max of the list
 min          returns min of the list
 ```
 
+### 2.2 Enumerate
+  
+Enumerate allows us to loop over a list and still have a counter.
 
+```python
+my_list = ['apple', 'banana', 'grapes', 'pear']
+for c, value in enumerate(my_list, 1):
+    print(c, value)
+```
 
+```
+ Output:  
+ 1 apple  
+ 2 banana  
+ 3 grapes  
+ 4 pear  
+```
 
 ## CHAPTER 3 - DICTIONARIES cr @methyldragon
 ### 3.10 Dictionaries  
