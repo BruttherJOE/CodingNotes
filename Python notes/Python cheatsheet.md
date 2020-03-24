@@ -171,11 +171,14 @@ for c, value in enumerate(my_list, 1):
 you may also specify at which index you want to start stuffing it from. This is an optional argument.  
   
 ```python
-my_list = ['apple', 'banana', 'grapes', 'pear']
-counter_list = list(enumerate(my_list, 1))
-print(counter_list)
-# Output: [(1, 'apple'), (2, 'banana'), (3, 'grapes'), (4, 'pear')]
+my_list = ['joe', 'valent', 'iggy', 'dody']
+counter_list = list(enumerate(my_list, 100))
+print(counter_list)  
+---------------------------
+# Output: [(100, 'joe'), (101, 'valent'), (102, 'iggy'), (103, 'dody')]
 ```
+#when I have time, I need to redo this part to make it clearer.
+[go to top](#top)
 
 ## CHAPTER 3 - DICTIONARIES cr @methyldragon
 ### 3.10 Dictionaries  
