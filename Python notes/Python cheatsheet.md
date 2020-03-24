@@ -246,7 +246,17 @@ an introduction will be placed here when i has dat time
 
 
   ### 4.1 Classes  
-  ...  
+  ```python
+  class dog:
+    pass
+  ```
+  > In python 2, classes require a parameter _(object)_. just follow this if on python 3.
+  
+  ### 4.15 Instances / Objects
+  An instance or object is a copy of the class with the actual values, such as a snake named haojun who has the functions such as slither()  
+  
+  An email account is a perfect example of an instance.
+
 
   ### 4.2 Special Methods
 Some class methods have names starting and ending with a double underscore. These methods allow a special syntax in the program and are called special methods. The constructor __init__ is one example.  
