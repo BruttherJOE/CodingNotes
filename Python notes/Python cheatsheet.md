@@ -126,10 +126,12 @@ list commands
 listname.*Method*(Parameters) to do Description
 
 ```
-Method    Parameters   Description
-append    itemname     adds itemname to listname
-index     itemname     returns index of position of itemname
-reverse   none         reverses the list
+Method    Parameters     Description
+append    itemname       adds itemname to listname
+insert    index,itemname adds itemname to listname at index position
+index     itemname       returns index of position of itemname
+reverse   none           reverses the list
+
 
 ```
 
