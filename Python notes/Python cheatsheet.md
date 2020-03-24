@@ -9,12 +9,12 @@ Author : BruttherJOE
     0.2) import libdw  
     0.3) import math  
   1) Strings  
-  2) Lists (in construction)
-    2.1) List Commands
-    2.2) Enumerate
-  3) Dictionaries (in construction)
+  2) Lists (in construction)  
+    2.1) List Commands  
+    2.2) Enumerate  
+  3) Dictionaries (in construction)  
   4) OOP (in construction)  
-  5) misc  
+  5) Misc  
     5.1) exception handling : try, except, finally  
     5.2) debugging  
     5.3) confusing arithmetic operators
