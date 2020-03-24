@@ -107,7 +107,6 @@ Map
 Lambda
 Str
 Repr
-In
 input
 enumerate
 file
