@@ -4,10 +4,10 @@ This is a cheat sheet prepared and used by myself in Digital world.
 Author : BruttherJOE
 
 ## Contents
-  0) Useful Imports
-    0.1) import time
-    0.2) import libdw
-    0.3) import math
+  0) Useful Imports  
+    0.1) import time  
+    0.2) import libdw  
+    0.3) import math  
   1) Strings  
   2) Lists (in construction)
     2.1) List Commands
