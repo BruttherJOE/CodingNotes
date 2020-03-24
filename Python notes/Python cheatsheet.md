@@ -59,6 +59,13 @@ Here is the link : https://people.sutd.edu.sg/~oka_kurniawan/10_009/doc/html/lib
 
 I will still be compiling the most useful stuff from this package in a table on this notes though, so stay tuned!  
 
+### import math  
+advanced arithmetic operations and variables  
+  
+`math.e` euler number  
+`math.pi` pi  
+
+
 ## Chapter 1 : Strings  
   
 [go to top](#top)  
