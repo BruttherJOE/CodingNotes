@@ -1,10 +1,18 @@
 # Pi notes  
 
-### Setting up a Raspberry Pi 3 as an Access Point
+### Setting up a Raspberry Pi 3 as an Access Point  
+  
+  #### Introduction
+  
+  But I mean, why would I? I have configured my rpi to run headless even without an access point. The requirements to do this is a hotspot from your phone. Your phone can serve as a remote access point when you need to access on the fly.  
+  Otherwise, if your rpi is like stuck in a location forever and you dont need to change the files just do this. JESSICA is doing this. Tho seems kinda pointless to me tho cause it removes the internet access.  
+  
 https://learn.sparkfun.com/tutorials/setting-up-a-raspberry-pi-3-as-an-access-point/all  
 ```sudo apt-get -y install hostapd dnsmasq```  
 
 > Note: If you are connected to your Raspberry Pi using SSH over wireless, you will want to connect with a keyboard/mouse/monitor, Ethernet, or serial instead until we get the access point configured.  
+
+> Note: If you accidentally remove your ssh to your headless pi then ethernet to your computer and angry ip scanner it to find the ip adresss. not recommended but its a fix to your problem
   
 Edit dhcp file, tell it to ignore wlan0 which is how it normally connects to wifi.
   
