@@ -1,7 +1,7 @@
 # Pi notes  
 
 ### Setting up a Raspberry Pi 3 as an Access Point
-https://learn.sparkfun.com/tutorials/setting-up-a-raspberry-pi-3-as-an-access-point/all
+https://learn.sparkfun.com/tutorials/setting-up-a-raspberry-pi-3-as-an-access-point/all  
 ```sudo apt-get -y install hostapd dnsmasq```  
 
 > Note: If you are connected to your Raspberry Pi using SSH over wireless, you will want to connect with a keyboard/mouse/monitor, Ethernet, or serial instead until we get the access point configured.  
