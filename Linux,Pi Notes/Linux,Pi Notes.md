@@ -32,10 +32,10 @@ iface wlan0 inet static
 ```
 sudo systemctl enable ssh
 sudo systemctl start ssh
-```
+```  
 to get ip address of rpi  
-```ip a```
-to ssh in
+```ip a```  
+to ssh in  
 ```ssh pi@pi_ip_address```  
 login as needed
 
