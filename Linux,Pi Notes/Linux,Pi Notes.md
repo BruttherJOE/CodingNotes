@@ -50,3 +50,9 @@ to ssh in
 ```ssh pi@pi_ip_address```  
 login as needed
 
+### Raspi-config  
+```sudo raspi-config```  
+ - set sound to come out of hdmi/jack
+ - ssh
+ - i2c
+ - spi
