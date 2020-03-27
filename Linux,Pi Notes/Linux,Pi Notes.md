@@ -35,7 +35,8 @@ iface wlan0 inet static
 ```
 
 ### SSH
-
+```sudo apt install openssh-server```  
+THEN  
 ```sudo raspi-config``` OR
 ```
 sudo systemctl enable ssh
