@@ -11,6 +11,8 @@ https://learn.sparkfun.com/tutorials/setting-up-a-raspberry-pi-3-as-an-access-po
 ```sudo apt-get -y install hostapd dnsmasq```  
 
 > Note: If you are connected to your Raspberry Pi using SSH over wireless, you will want to connect with a keyboard/mouse/monitor, Ethernet, or serial instead until we get the access point configured.  
+  
+> Note: This causes your RPI to boot SLOW!
 
 > Note: If you accidentally remove your ssh to your headless pi then ethernet to your computer and angry ip scanner it to find the ip adresss. not recommended but its a fix to your problem
   
