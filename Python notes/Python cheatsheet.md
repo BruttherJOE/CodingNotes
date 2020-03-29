@@ -14,6 +14,7 @@ Author : BruttherJOE
     2.2) Enumerate  
   3) Dictionaries (in construction)  
   4) OOP (in construction)  
+    4.25) #__init__
   5) Misc  
     5.1) exception handling : try, except, finally  
     5.2) debugging  
@@ -323,6 +324,8 @@ class F04:
         self.age = age
 
 ```
+
+> Note : You never have to call the init function, its auto called when you have new inputs / instances
 
 ## Chapter 5 - Misc  
 [go to top](#top)
