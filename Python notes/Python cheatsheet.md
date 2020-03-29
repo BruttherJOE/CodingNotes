@@ -307,6 +307,22 @@ List of special methods:
   __call__
 ```
 
+  ### 4.25 __init__ Special Method
+The ```__init__``` method is used to initialise attributes (characteristics) that a class of things may have. 
+For example, people in a "class" have names. all inits have "self" as an argument
+(the input variables between the brackets after init). 
+Self means its referring to itself. (an object's instance)
+
+```python
+class F04:
+
+    # Initializer / Instance Attributes
+    def __init__(self, name, age): #inputs
+        #set input name, age to be related to an instance
+        self.name = name 
+        self.age = age
+
+```
 
 ## Chapter 5 - Misc  
 [go to top](#top)
