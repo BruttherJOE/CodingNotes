@@ -63,6 +63,7 @@ login as needed
 ```raspi-config``` and turn on SPI  
 ```pip install mfrc522``` to install mfrc522 package  
 make sure idle is installed.
+```lsmod | grep spi``` to see whether spi is running or not
   
 #### Example Code
 
