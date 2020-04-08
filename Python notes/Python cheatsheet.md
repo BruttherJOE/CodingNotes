@@ -148,6 +148,8 @@ Method       Description
 len          returns length of the list in int form
 max          returns max of the list
 min          returns min of the list
+sorted       returns the list, sorted from smallest value to highest.  
+             can be used for int/str. str from a-z. opt param (reverse)
 ```
 
 ### 2.2 Enumerate
