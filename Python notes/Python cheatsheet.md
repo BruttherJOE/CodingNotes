@@ -8,7 +8,8 @@ Author : BruttherJOE
     0.1) import time  
     0.2) import libdw  
     0.3) import math  
-    0.4) import numpy
+    0.4) import numpy  
+     >0.41) numpy array  
   1) Strings  
   2) Lists (in construction)  
     2.1) List Commands  
@@ -97,7 +98,20 @@ _____________________________________
    n = m.shape
    print n
    ```
-   `(3,3)`
+   `(3,3)`  
+____________________________
+For the below examples, let m and v be your matrices.  
+
+#### matrix multiplication
+  the matrix multiplication of m and v is `m@v`
+#### matrix addition/multiplication of elements  
+  `v+1` adds 1 to all the elements of v.  
+  `m*2` multiplies all elements of m by 2.  
+  
+   
+   
+   
+   
  
   
 ________________________
@@ -217,9 +231,9 @@ print(counter_list)
 [go to top](#top)
 
 Dictionaries are made up of values with **UNIQUE** keys for every value.  
-It's basically a keyed list.  
+It's basically a list with keys.  
 Keys are immutable. This means that they cannot be changed.  
-This is because the value will get confused and kill itself.  
+This is because the values will get confused and kill itself.  
 
 > You can't join dictionaries like you can with lists  
 
@@ -237,16 +251,14 @@ dictionary = {"jack" : "good person",
 # The things to the left of the colon are the keys, and the ones on the right are the values
 
 # To call an entry by key
-Method                                Description
-species_dictionary["methylDragon"]    Returns Dragon
-
-# To reassign values (Think lists, but with keys instead of indexes!)
-species_dictionary["haojun"] = "Human"
+Method                                  Description
+dictionary["apple"]                     Returns fruit
+dictionary["haojun"] = "not human"      Reassign haojun to become "not human"
 
 # Empty dictionary
 empty_dictionary = {}
 ```
-
+____________________________________
 #### **Dictionary Comprehensions**
 
 ```python
