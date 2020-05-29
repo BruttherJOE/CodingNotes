@@ -8,6 +8,7 @@ Author : BruttherJOE
     0.1) import time  
     0.2) import libdw  
     0.3) import math  
+    0.4) import numpy
   1) Strings  
   2) Lists (in construction)  
     2.1) List Commands  
@@ -24,7 +25,7 @@ Author : BruttherJOE
   ### Introduction to imports
   will update when there is time.
   
-  
+  ___________________
   ### import time
   > time is useful for timing things in your program.  
 
@@ -50,7 +51,7 @@ def stopwatch_fn:
   total_time_taken = start_time - end_time
   return total_time_taken
 ```
-
+___________________________
 ### import libdw
 
 #### Introduction
@@ -59,19 +60,47 @@ For windows, in anaconda prompt, or terminal on linux/IOS, to install, do
 `pip install libdw`  
 this will install the package.  
 
-#### Documentations
+##### Documentations
 the full list is too long and there is already good documentations on it.  
 Here is the link : https://people.sutd.edu.sg/~oka_kurniawan/10_009/doc/html/libdw.html
 
 I will still be compiling the most useful stuff from this package in a table on this notes though, so stay tuned!  
 
+______________________________
 ### import math  
 advanced arithmetic operations and variables  
   
 `math.e` euler number  
 `math.pi` pi  
+_________________________________________  
 
-
+### import numpy
+library that involves handling of numbers
+#### np array
+  `np.array`  
+  this creates an array. usually done by a list of lists. these lists need to be same length.
+  
+  ```python
+  m = np.array([1,2,3],[4,5,6],[7,8,9])
+  print(m)
+  ```
+  ```
+  [[1 2 3]
+   [4 5 6]
+   [7 8 9]]
+   ```
+_____________________________________
+#### np array shape
+   `[arrayname].shape`  
+   this command will tell you the x and y lengths of the array respectively. You can store this in a variable.
+   ```python
+   n = m.shape
+   print n
+   ```
+   `(3,3)`
+ 
+  
+________________________
 ## Chapter 1 : Strings  
   
 [go to top](#top)  
