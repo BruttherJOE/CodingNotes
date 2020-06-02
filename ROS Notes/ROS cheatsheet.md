@@ -19,3 +19,13 @@ type
 find            find topics by type
 ```
 
+## Turtlesim (for testing)
+
+starts roscore  
+`$ roscore`  
+  
+run turtlesim  
+`$ rosrun turtlesim turtlesim_node`  
+  
+using arrow keys to move turtle   
+`rosrun turtlesim turtle_teleop_key`  
