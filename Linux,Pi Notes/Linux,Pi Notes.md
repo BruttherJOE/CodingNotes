@@ -35,7 +35,7 @@ iface wlan0 inet static
     network 192.168.5.0
     broadcast 192.168.5.255
 ```
-
+___________________
 ### SSH
 ```sudo apt install openssh-server```  
 THEN  
@@ -49,7 +49,7 @@ to get ip address of rpi
 to ssh in  
 ```ssh pi@pi_ip_address```  
 login as needed
-
+____________________________
 ### Raspi-config  
 ```sudo raspi-config```  
  - set sound to come out of hdmi/jack
@@ -84,10 +84,10 @@ except KeyboardInterrupt:
     GPIO.cleanup()
     raise
 ```
-
+_____________________________
 ### Listing USB devices
 `ls -l /dev | grep ttyUSB`
-
+________________________
 ### Common errors  
 Problem : cannot connect to security.ubuntu to receive updates. Usually occurs when doing through proxy.  
 Solution : The issue is that the proxy settings are not being passed to the "sudo" level. You are able to ping and wget stuff as a normal user since you have the `http_proxy` and `https_proxy` settings set for that current user. When you use sudo, those environment variables are not passed to the elevated user.  
@@ -97,3 +97,4 @@ The solution is to use -E with sudo to pass on those environment variables to th
   
   do everything with `sudo -E`
 
+____________________________
