@@ -88,4 +88,12 @@ except KeyboardInterrupt:
 ### Listing USB devices
 `ls -l /dev | grep ttyUSB`
 
+### Common errors  
+Problem : cannot connect to security.ubuntu to receive updates. Usually occurs when doing through proxy.  
+Solution : The issue is that the proxy settings are not being passed to the "sudo" level. You are able to ping and wget stuff as a normal user since you have the `http_proxy` and `https_proxy` settings set for that current user. When you use sudo, those environment variables are not passed to the elevated user.  
+  
+The solution is to use -E with sudo to pass on those environment variables to the elevated user.  
+`sudo -E apt-get update`  
+  
+  do everything with `sudo -E`
 
