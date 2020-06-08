@@ -1,23 +1,23 @@
 # Pi notes  
 
 ### Setting up a Raspberry Pi 3 as an Access Point  
-  
+
   #### Introduction
-  
+
   You shouldnt need to do this. I have configured my rpi to run headless even without an access point. The requirements to do this is a hotspot from your phone. Your phone can serve as a remote access point when you need to access on the fly.  
   Otherwise, if your rpi is like stuck in a location forever and you dont need to change the files just do this. JESSICA is doing this. Tho seems kinda pointless to me tho cause it removes the internet access.  
-  
+
 https://learn.sparkfun.com/tutorials/setting-up-a-raspberry-pi-3-as-an-access-point/all  
 ```sudo apt-get -y install hostapd dnsmasq```  
 
 > Note1: If you are connected to your Raspberry Pi using SSH over wireless, you will want to connect with a keyboard/mouse/monitor, Ethernet, or serial instead until we get the access point configured.  
-  
+
 > Note2: This causes your RPI to boot SLOW!
 
 > Note3: If you accidentally remove your ssh to your headless pi then ethernet to your computer and angry ip scanner it to find the ip adresss. not recommended but its a fix to your problem
-  
+
 Edit dhcp file, tell it to ignore wlan0 which is how it normally connects to wifi.
-  
+
 ```sudo nano /etc/dhcpcd.conf```  
 ```denyinterfaces wlan0```  
 ```sudo nano /etc/network/interfaces``` and add  
@@ -43,7 +43,7 @@ THEN
 ```
 sudo systemctl enable ssh
 sudo systemctl start ssh
-```  
+```
 to get ip address of rpi  
 ```ip a```  
 to ssh in  
@@ -64,7 +64,7 @@ ____________________________
 ```pip3 install mfrc522``` to install mfrc522 package #or pip  
 make sure idle is installed.
 ```lsmod | grep spi``` to see whether spi is running or not
-  
+
 #### Example Code
 
 ```
@@ -91,10 +91,51 @@ ________________________
 ### Common errors  
 Problem : cannot connect to security.ubuntu to receive updates. Usually occurs when doing through proxy.  
 Solution : The issue is that the proxy settings are not being passed to the "sudo" level. You are able to ping and wget stuff as a normal user since you have the `http_proxy` and `https_proxy` settings set for that current user. When you use sudo, those environment variables are not passed to the elevated user.  
-  
+
 The solution is to use -E with sudo to pass on those environment variables to the elevated user.  
 `sudo -E apt-get update`  
-  
+
   do everything with `sudo -E`
 
 ____________________________
+
+
+
+# Basic Shell Commands
+
+`cd ..` moves up one directory
+
+`cd ~` moves to home directory
+
+`cd /` cd into root
+
+
+
+`ls /` lists all the directories from root (the lowest file point in the system)
+
+`cp <file> <directory copied to>` copies files
+
+### `scp` secure copy
+
+**Introduction**
+
+while `cp` is for copying local files, `scp` is for remote file transfer, and mostly used by me to copy files when on ssh. This is useful for many reasons; If my linux is connected to my rpi, and I want to transfer files between the 2, I use `scp`.
+
+
+
+**Copy single file from local to remote**
+
+`scp myfile.txt remoteuser@remoteserver:/remote/folder/`
+
+
+
+**Copy single file from remote to local**
+
+`scp remoteuser@remoteserver:/remote/folder/myfile.txt  myfile.txt`
+
+
+
+**Copy all files from local to remote**
+
+`scp * remoteuser@remoteserver:/remote/folder/`
+
