@@ -4,8 +4,9 @@
 
   #### Introduction
 
-  You shouldnt need to do this. I have configured my rpi to run headless even without an access point. The requirements to do this is a hotspot from your phone. Your phone can serve as a remote access point when you need to access on the fly.  
-  Otherwise, if your rpi is like stuck in a location forever and you dont need to change the files just do this. JESSICA is doing this. Tho seems kinda pointless to me tho cause it removes the internet access.  
+You shouldnt need to do this. I have configured my rpi to run headless even without an access point. The requirements to do this is a hotspot from your phone. Your phone can serve as a remote access point when you need to access on the fly.  
+
+Otherwise, if your rpi is like stuck in a location forever and you dont need to change the files just do this. JESSICA is doing this. Tho seems kinda pointless to me tho cause it removes the internet access.  
 
 https://learn.sparkfun.com/tutorials/setting-up-a-raspberry-pi-3-as-an-access-point/all  
 ```sudo apt-get -y install hostapd dnsmasq```  
@@ -16,30 +17,14 @@ https://learn.sparkfun.com/tutorials/setting-up-a-raspberry-pi-3-as-an-access-po
 
 > Note3: If you accidentally remove your ssh to your headless pi then ethernet to your computer and angry ip scanner it to find the ip adresss. not recommended but its a fix to your problem
 
-Edit dhcp file, tell it to ignore wlan0 which is how it normally connects to wifi.
 
-```sudo nano /etc/dhcpcd.conf```  
-```denyinterfaces wlan0```  
-```sudo nano /etc/network/interfaces``` and add  
-```
-auto lo
-iface lo inet loopback
 
-auto eth0
-iface eth0 inet dhcp
-
-allow-hotplug wlan0
-iface wlan0 inet static
-    address 192.168.5.1
-    netmask 255.255.255.0
-    network 192.168.5.0
-    broadcast 192.168.5.255
-```
 ___________________
 ### SSH
 ```sudo apt install openssh-server```  
 THEN  
 ```sudo raspi-config``` OR
+
 ```
 sudo systemctl enable ssh
 sudo systemctl start ssh
@@ -52,6 +37,9 @@ login as needed
 ____________________________
 ### Raspi-config  
 ```sudo raspi-config```  
+
+This gives you several options to tinker with. They are namely, but not limited to :
+
  - set sound to come out of hdmi/jack
  - ssh
  - i2c
@@ -85,10 +73,17 @@ except KeyboardInterrupt:
     raise
 ```
 _____________________________
+
+
 ### Listing USB devices
+
 `ls -l /dev | grep ttyUSB`
+
 ________________________
+
+
 ### Common errors  
+
 Problem : cannot connect to security.ubuntu to receive updates. Usually occurs when doing through proxy.  
 Solution : The issue is that the proxy settings are not being passed to the "sudo" level. You are able to ping and wget stuff as a normal user since you have the `http_proxy` and `https_proxy` settings set for that current user. When you use sudo, those environment variables are not passed to the elevated user.  
 
@@ -113,9 +108,27 @@ ____________________________
 
 `ls /` lists all the directories from root (the lowest file point in the system)
 
-`cp <file> <directory copied to>` copies files
+`cp <file> <target directory copied to>` copies files
 
-### `scp` secure copy
+`pwd` print working directory. Gets you the file path.
+
+
+
+### `cp` Copy
+
+**cp directory to directory**
+
+to copy both the contents as well as the file directory to the target, do :
+
+`cp -R <dir> <target dir>`
+
+to copy only the contents and not the directory, do :
+
+`cp -RT <dir> <target dir>`
+
+
+
+### `scp` Secure Copy
 
 **Introduction**
 
@@ -138,4 +151,16 @@ while `cp` is for copying local files, `scp` is for remote file transfer, and mo
 **Copy all files from local to remote**
 
 `scp * remoteuser@remoteserver:/remote/folder/`
+
+
+
+**Copy directory from remote to local**
+
+`scp -r user@your.server.example.com:/path/to/joe /home/user/Desktop/`
+
+By not including the trailing `/` at the end of joe, you will move the directory itself (including contents), rather than only the contents of the directory.
+
+
+
+
 
