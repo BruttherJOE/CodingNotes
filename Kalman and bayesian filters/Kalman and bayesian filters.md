@@ -20,10 +20,9 @@ https://www.bzarg.com/p/how-a-kalman-filter-works-in-pictures/
 
 
 
-The basic equation :
-$$
-\dot{\mathbf{x}} = \mathbf{Fx} + \mathbf{Gu} + w
-$$
+The basic equation :  
+  
+![\dot{\mathbf{x}} = \mathbf{Fx} + \mathbf{Gu} + w](https://render.githubusercontent.com/render/math?math=%5Cdot%7B%5Cmathbf%7Bx%7D%7D%20%3D%20%5Cmathbf%7BFx%7D%20%2B%20%5Cmathbf%7BGu%7D%20%2B%20w)
 
 
 Where F is the state transition matrix
