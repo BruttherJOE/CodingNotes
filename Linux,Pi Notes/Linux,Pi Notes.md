@@ -96,7 +96,13 @@ ____________________________
 
 
 
-# Basic Shell Commands
+
+
+# Linux Notes
+
+
+
+### Basic Shell Commands
 
 `cd ..` moves up one directory
 
@@ -111,6 +117,42 @@ ____________________________
 `cp <file> <target directory copied to>` copies files
 
 `pwd` print working directory. Gets you the file path.
+
+
+
+### `mv` Move
+
+moves directory to directory. cut and paste.
+
+`sudo mv <file path> <target file path>`
+
+for eg.
+
+`sudo mv ~/bbb_ws/data/cetran /data/`
+
+
+
+### `rm` Remove
+
+remove target file. Does not remove directories (Folders)
+
+`rm *<pattern>` for example
+
+`rm *.txt` removes all files with `.txt` extension.
+
+
+
+### `rm -R` Remove recursively
+
+Removes target directory and all its contents. Be careful with this command.
+`rm -R <path to directory to be removed>`
+
+
+
+### `rmdir` Remove Directory
+
+deletes empty directories, useful for deleting directory only if it is empty.
+Navigate to target dir, then `rmdir <name of directory>`
 
 
 
@@ -162,5 +204,12 @@ By not including the trailing `/` at the end of joe, you will move the directory
 
 
 
+## Docker
+
+Docker is a container. To understand it, it is sort of like a virtual machine. People use it as it is more resource-friendly, and it is like a pre-set environment such that it is portable and can move across systems. Think of it as a linux dual boot system that is able to move across systems! no more long-ass reinstalls. This is great to use for companies and projects that would involve new people coming in over time.
 
 
+
+To set up docker
+
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04
