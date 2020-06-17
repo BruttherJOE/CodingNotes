@@ -338,7 +338,7 @@ To kill the process :
 
 **<> is neither a launch file in package nor is it a launch file name**
 
-![errmsg](C:\Users\uic77433\Desktop\CodingNotes\ROS Notes\assets\errmsg.jpg)
+![errmsg](./assets/errmsg.jpg)  
 
 This happens when you do not source your environment.
 
