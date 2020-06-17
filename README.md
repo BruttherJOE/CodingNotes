@@ -50,5 +50,8 @@ Content in the first column | Content in the second column
 `this inlines the code`
 ```
 
+### Pictures
+make an ./assets folder. link your picture onto your .md file with this link location
+![this_does_not_matter](./assets/<your_picture_name_and_extension.jpg>)  
 
 
