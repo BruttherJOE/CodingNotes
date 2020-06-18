@@ -1,0 +1,147 @@
+state vector:
+x_k = [x, y, z, vx, vy, vz, R, P, Y]
+x_k = [x, y, z, vx, vy, vz, qw, qx, qy, qz]
+
+model = constant velocity
+
+dt = constant = 50ms for example
+
+x_k = x_k-1 + vx_k-1 * dt
+y_k = y_k-1 + vy_k-1 * dt
+z_k = z_k-1 + vz_k-1 * dt
+
+vx_k = vx_k-1
+vy_k = vy_k-1
+vz_k = vz_k-1
+#constant velocity
+
+qw_k = qw_k-1
+qx_k = qx_k-1
+qy_k = qy_k-1
+qz_k = qz_k-1
+#rotation does not change
+
+=> F
+
+F is a fn that relates x_k and x_k-1
+
+F = [1 0 0 dt 0 0 0 0 0 0
+     0 1 0 0  dt 0 0 0 0
+    .....
+
+Predict: x_k = F * x_k-1
+
+
+
+
+
+
+Update: z_k = H * x_k
+
+x_k = [x, y, z, vx, vy, vz, qw, qx, qy, qz]
+z_k = [x, y, z]
+
+
+H = [1 1 1 0 0 0 0 0 0 0]
+x, y, z, vx, ... => x, y, z
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+environment map <- compare -> lidar scan (10Hz)        =>        z_k = [x, y, z, qw, qx, qy, qz]
+
+
+x_k = [x, y, z, vx, vy, vz, qw, qx, qy, qz] - H ->  [x, y, z, qw, qx, qy, qz]
+
+
+
+Predict: x_k = F * x_k-1    (no input)
+Update:  x_k_hat = ...      (lidar input)
+
+
+
+
+
+
+
+
+
+
+
+
+x_k = [x, y, z, vx, vy, vz, qw, qx, qy, qz]
+P_k = [var_x
+            var_y
+                 var_z
+                      var_vx
+                            ...]
+
+
+
+
+
+
+
+
+
+
+Predict: x_k = F * x_k-1 + w
+Update: z_k = H * x_k + v
+
+robot always constant velocity -> w low
+gps signal is bad -> v high
+
+
+UPDATE = FUSION x_k + z_k
+
+
+
+
+
+
+
+
+Pose = position + orientation (euler/quaternion)
+
+PREDICTION w = [var_x, var_y, var_z, var_vx, var_vy, var_vz, var_qw, var_qx, var_qy, var_qz] = [1, 1, 1, 1, 1, 1, 0.5, 0.5, 0.5] -> tends to be uncertain
+LIDAR v = [var_x, var_y, var_z, var_qw, var_qx, var_qy, var_qz] = [0.01, 0.01, 0.01, 0.001, 0.001, 0.001, 0.001] -> low variance -> quite certain
+
+(GPS v = [var_x, var_y] = [20, 20])
+
+
+
+
+
+
+
+
+
+
+
+RECAP
+-----
+x state vector = [x, y, ...]
+z observation vector = [...] (from lidar)
+
+F transition/process matrix
+H observation matrix
+
+w process noise
+v observation noise
+
+
+
+Terminology
+prediction = transition = process (propagation)
+update = fusion
+measurement = observation

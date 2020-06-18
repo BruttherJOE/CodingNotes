@@ -1,5 +1,7 @@
 # Kalman and bayesian filters
 
+
+
 a knowledge dump
 
 compiled by BruttherJOE
@@ -56,7 +58,7 @@ Legend :
 
 
 
-I don't know why there is 2 zeroes on this x axis. If someone knows why, please tell me why.
+I don't know why there are 2 zeroes on this x axis. If someone knows why, please tell me why.
 
 
 
@@ -106,9 +108,13 @@ Also, whenever you see an x with a caret or a hat over it, this means that it is
 
 
 
+the predict function is f, while update function is h.
+
 
 
 ### Covariance
+
+[Source : Methyldragon]
 
 Covariance is the tendency for two variables to **vary together**, which is a way of being correlated!
 
@@ -123,11 +129,11 @@ UKFs are slower but more accurate for non-linear transformations
 
 
 high value = high variance 
-if you are certain then set a low variance
+if you are certain of the accuracy of your instrument, then set a low variance
 
 
 
-Fk aka transition matrix is usually a constant
+
 
 
 
@@ -138,6 +144,14 @@ Fk aka transition matrix is usually a constant
 
 
 The covariance matrix is symmetrical. This means the covariance of xy and yx is the same.
+
+
+
+### State transition matrix
+
+answer this first, then all will fall in place
+
+F_k aka the transition matrix is usually a constant. F is a function that relates x_k and x_k-1
 
 
 
@@ -315,11 +329,95 @@ x_hat_n+1,n is the estimate of future state (n+1) of x and the estimate is amde 
 
 
 
-references
+
+
+
+
+
+
+
+
+### Filterpy
+
+```python
+from filterpy.kalman import KalmanFilter 
+f = KalmanFilter (dim_x=2, dim_z=1)
+
+f.x = np.array([2., 0.]) #position, velocity
+f.F = np.array([[1.,1.],[0.,1.]]) #define state transition matrix
+
+f.H = np.array([[1.,0.]]) #define measurement fn
+ 
+f.P = np.array([[1000., 0.],[ 0., 1000.] ]) #define covariance matrix
+
+f.R = np.array([[5.]]) # assign measurement noise. since dimension 1x1, can use scalar.
+# Note that this must be a 2 dimensional array, as must all the matrices.
+
+from filterpy.common import Q_discrete_white_noise
+f.Q = Q_discrete_white_noise(dim=2, dt=0.1, var=0.13) #assign process noise
+
+#while some_condition_is true :
+z = get_sensor_reading()
+f.predict()
+f.update(z)
+do_something_with_estimate (f.x) #perform standard predict/update loop
+
+```
+
+```python
+# Covariance for UKF simulation
+Q = np.diag([
+    0.1,  # variance of location on x-axis
+    0.1,  # variance of location on y-axis
+    np.deg2rad(1.0),  # variance of yaw angle
+    1.0  # variance of velocity
+]) ** 2  # predict state covariance
+R = np.diag([1.0, 1.0]) ** 2  # Observation x,y position covariance
+
+#  Simulation parameter
+INPUT_NOISE = np.diag([1.0, np.deg2rad(30.0)]) ** 2
+GPS_NOISE = np.diag([0.5, 0.5]) ** 2
+
+DT = 0.1  # time tick [s]
+SIM_TIME = 50.0  # simulation time [s]
+
+#  UKF Parameter
+ALPHA = 0.001
+BETA = 2
+KAPPA = 0
+
+
+# Other Parameters
+H = np.array([
+    [1, 0, 0, 0],
+    [0, 1, 0, 0]
+])
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+list of most useful references
 
 1. https://www.bzarg.com/p/how-a-kalman-filter-works-in-pictures/
 2. https://www.kalmanfilter.net/default.aspx
 3. https://en.wikipedia.org/wiki/Kalman_filter
+4. [https://github.com/methylDragon/ros-sensor-fusion-tutorial/blob/master/01%20-%20ROS%20and%20Sensor%20Fusion%20Tutorial.md](https://github.com/methylDragon/ros-sensor-fusion-tutorial/blob/master/01 - ROS and Sensor Fusion Tutorial.md)
 
 
 
