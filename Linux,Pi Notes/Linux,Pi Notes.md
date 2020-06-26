@@ -213,3 +213,31 @@ Docker is a container. To understand it, it is sort of like a virtual machine. P
 To set up docker
 
 https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04
+
+
+
+
+
+### GIT AND GITHUB
+
+to get single files : 
+
+
+
+1. click on the file in github web
+
+2. press `raw` to display the file contents.
+
+3. `curl -LJO <your_url_in_raw>`
+
+4. the contents should appear in your `home` directory.
+
+
+
+There is also an extension called enhanced github 
+
+```
+https://chrome.google.com/webstore/detail/enhanced-github/anlikcnbgdeidpacdbdljnabclhahhmd/related
+```
+
+this adds a download button to your file in github web, so it becomes google drive.
