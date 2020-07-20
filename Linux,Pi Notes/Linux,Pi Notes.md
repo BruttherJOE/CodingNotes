@@ -120,6 +120,10 @@ ____________________________
 
 
 
+`cat` displays in terminal the contents of a .py or .txt file. For example, `cat pose_estimator.py`
+
+
+
 ### `mv` Move
 
 moves directory to directory. cut and paste.
@@ -129,6 +133,14 @@ moves directory to directory. cut and paste.
 for eg.
 
 `sudo mv ~/bbb_ws/data/cetran /data/`
+
+
+
+beware : this can also be used to **RENAME** files.
+
+`mv <file1.ext> <file2.ext>`
+
+
 
 
 
@@ -241,3 +253,24 @@ https://chrome.google.com/webstore/detail/enhanced-github/anlikcnbgdeidpacdbdljn
 ```
 
 this adds a download button to your file in github web, so it becomes google drive.
+
+This is very useful!
+
+
+
+`git diff` shows the difference between 2 git files.
+
+`git checkout` changes branches
+
+`git status` show whether your branch is up to date
+
+`git add <file>` stages files to be committed.
+
+`git add <file> .` stages files to be committed here. the full stop "." is used to denote "here"
+
+`git commit <file>` commits files
+
+`git log` shows file edit history
+
+`git push origin` push to origin ?????
+
