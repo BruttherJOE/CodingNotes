@@ -30,6 +30,21 @@ Blocks must be encapsulated by `{}`.
 
 ## Code Organisation and flow
 
+### Simple Template
+```c++
+/*
+ * Comment to state the purpose of this program (filename.cpp)
+ */
+#include <iostream>
+using namespace std;
+ 
+int main() {
+   // Your Programming statements HERE!
+ 
+   return 0;
+}
+```
+
 ### Line Comprehension
 
 You can make one liners to flex on your friends! bad for reading and documentation though.
