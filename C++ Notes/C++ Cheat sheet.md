@@ -10,14 +10,28 @@
 
 
 # Stuff to start developing with VSC
-- download mingw
+- download mingw to compile cpp files
 http://mingw.org/
 
 - download VSC with c/c++ extension
 
+- download code runner to run cpp files in vsc
+
 - create workspace (file > add folder to workspace)
 
 [link : https://www.youtube.com/watch?v=guM4XS43m4I]
+
+
+basic code to test whether it compiles :
+```
+#include<stdio.h>
+
+int main(){
+    printf("hello world");
+    return 0;
+    
+}
+```
 
 # Basic Syntax
 
