@@ -17,7 +17,7 @@ http://mingw.org/
 
 - create workspace (file > add folder to workspace)
 
-
+[link : https://www.youtube.com/watch?v=guM4XS43m4I]
 
 # Basic Syntax
 
