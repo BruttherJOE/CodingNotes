@@ -8,6 +8,17 @@
 
 [TOC]
 
+
+# Stuff to start developing with VSC
+- download mingw
+http://mingw.org/
+
+- download VSC with c/c++ extension
+
+- create workspace (file > add folder to workspace)
+
+
+
 # Basic Syntax
 
 ## Semicolons & Blocks in C++
