@@ -26,15 +26,45 @@ Kalman filters :
 
 Noisy sensor data, approximations in the equations that describe the system evolution, and external factors that are not accounted for all place limits on how well it is possible to determine the system's state. The Kalman filter deals effectively with the uncertainty due to noisy sensor data and, to some extent, with random external factors. 
 
+
+
 The Kalman filter produces an estimate of the state of the system as an average of the system's predicted state and of the new measurement using a weighted average. The purpose of the weights is that values with better (i.e., smaller) estimated uncertainty are "trusted" more. The weights are calculated from the covariance, a measure of the estimated uncertainty of the prediction of the system's state. The result of the weighted average is a new state estimate that lies between the predicted and measured state, and has a better estimated uncertainty than either alone. This process is repeated at every time step, with the new estimate and its covariance informing the prediction used in the following iteration. 
+
+
 
 This means that Kalman filter works recursively and requires only the last "best guess", rather than the entire history, of a system's state to calculate a new state.
 
+
+
 The relative certainty of the measurements and current state estimate is an important consideration, and it is common to discuss the response of the filter in terms of the Kalman filter's gain. The Kalman gain is the relative weight given to the measurements and current state estimate, and can be "tuned" to achieve a particular performance. **With a high gain, the filter places more weight on the most recent measurements, and thus follows them more responsively. With a low gain, the filter follows the model predictions more closely.** 
+
+
 
 At the extremes, a high gain close to one will result in a more jumpy estimated trajectory, while a low gain close to zero will smooth out noise but decrease the responsiveness.
 
+
+
 When performing the actual calculations for the filter, the state estimate and covariances are coded into matrices to handle the multiple dimensions involved in a single set of calculations. This allows for a representation of linear relationships between different state variables (such as position, velocity, and acceleration) in any of the transition models or covariances.
+
+
+
+
+
+### The Basic Idea
+
+Every kalman filter has 3 steps.
+
+
+
+- **Predict** — Based on previous knowledge of a vehicle position and kinematic equations, we **predict** what should be the position of vehicle after time t+1.
+
+  
+
+- **Measurement** — Get readings from sensor regarding position of vehicle and compare it with our prediction
+
+  
+
+- **Update** — Update our knowledge about position (or state) of vehicle based on our prediction and sensor readings.
 
 
 
@@ -46,7 +76,7 @@ As one can clearly see, it reduces the noise on instruments that measure things.
 
 
 
-![Kalman](C:\Users\uic77433\Desktop\work stuff\CodingNotes\Kalman and bayesian filters\assets\Kalman.png)
+![Kalman](\assets\Kalman.png)
 
 
 
@@ -112,6 +142,10 @@ the predict function is f, while update function is h.
 
 
 
+
+
+
+
 ### Covariance
 
 [Source : Methyldragon]
@@ -137,7 +171,7 @@ if you are certain of the accuracy of your instrument, then set a low variance
 
 
 
-![1_3](C:\Users\uic77433\Desktop\work stuff\CodingNotes\Kalman and bayesian filters\assets\1_3.png)
+![1_3](assets\1_3.png)
 
 ​															(Image Source: University of Wisconsin)
 
@@ -229,6 +263,15 @@ The expected value is usually denoted by letter **E**.
 
 
 
+### Prior and Posterior
+
+In some texts you may see these two terms. 
+
+`Prior` simply means your probability distribution **before** you have sampled data and 
+`Posterior` means your probability distribution **after** you have sampled data.
+
+
+
 
 
 ### Variance and std dev
@@ -285,11 +328,17 @@ To compute the state and its statistical properties at the next time step, the u
 
 
 
+
+
 The spread of the sigma points around the mean state value is controlled by two parameters *α* and *κ*. A third parameter, *β*, impacts the weights of the transformed points during state and measurement covariance calculations.
 
 - *α* — Determines the spread of the sigma points around the mean state value. It is usually a small positive value. The spread of sigma points is proportional to *α*. Smaller values correspond to sigma points closer to the mean state.
 - *κ* — A second scaling parameter that is usually set to 0. Smaller values correspond to sigma points closer to the mean state. The spread is proportional to the square-root of *κ*.
 - *β* — Incorporates prior knowledge of the distribution of the state. For Gaussian distributions, *β* = 2 is optimal.
+
+
+
+
 
 You specify these parameters in the `Alpha`, `Kappa`, and `Beta` properties of the unscented Kalman filter. If you know the distribution of state and state covariance, you can adjust these parameters to capture the transformation of higher-order moments of the distribution. The algorithm can track only a single peak in the probability distribution of the state. If there are multiple peaks in the state distribution of your system, you can adjust these parameters so that the sigma points stay around a single peak. For example, choose a small `Alpha` to generate sigma points close to the mean state value.
 
@@ -299,7 +348,7 @@ You specify these parameters in the `Alpha`, `Kappa`, and `Beta` properties of t
 
 
 
-Measuring something multiple times
+### Measuring something multiple times
 
 usually like ultrasonic sensor, weighing scale...
 
@@ -326,6 +375,12 @@ x_hat_n+1,n is the estimate of future state (n+1) of x and the estimate is amde 
 
 
 
+
+
+
+
+
+an example implementation of kf :
 
 
 
@@ -437,6 +492,44 @@ B = np.array([[DT * math.cos(x[2]), 0],
               [1.0, 0.0]])
 
 ```
+
+
+
+### Formula calculations for state transition function, F
+
+[credits : https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python/blob/master/10-Unscented-Kalman-Filter.ipynb]
+
+![formula calc](assets\formula calc.png)
+
+
+
+due to matrix multiplication, we see the three formulas (note that xdot is previous speed) :
+
+new distance = x + previous speed * dt + 0
+new speed = 0 + previous speed + 0
+new altitude = 0 + 0 + previous altitude
+
+since x is [x xdot y], we end up dotting f and x together. `return np.dot(F, x)` for this formula to be implemented.
+
+example : 
+
+```python
+def f_radar(x, dt):
+    """ state transition function for a constant velocity 
+    aircraft with state vector [x, velocity, altitude]'"""
+    
+    F = np.array([[1, dt, 0],
+                  [0,  1, 0],
+                  [0,  0, 1]], dtype=float)
+    return np.dot(F, x)
+
+```
+
+
+
+
+
+
 
 
 
@@ -703,13 +796,19 @@ if __name__ == '__main__':
 
 
 
+**Disclaimer**
+
+This is by no means a complete guide to Kalman Filter. In addition to this, you will need to use stuff from my resources and definitely even more. The subject of Kalman filtering is very broad, but for the working engineer, a basic idea of it will probably suffice. Hopefully. (Still, its always better to know more)
+
+Even after my internship, I will continue to update this knowledge dump at my own time at
+
+[https://github.com/BruttherJOE/CodingNotes/blob/master/Kalman%20and%20bayesian%20filters/Kalman%20and%20bayesian%20filters.md](https://github.com/BruttherJOE/CodingNotes/blob/master/Kalman and bayesian filters/Kalman and bayesian filters.md)
 
 
 
 
 
-
-
+### Resources
 
 list of most useful references
 
@@ -717,9 +816,6 @@ list of most useful references
 2. https://www.kalmanfilter.net/default.aspx
 3. https://en.wikipedia.org/wiki/Kalman_filter
 4. [https://github.com/methylDragon/ros-sensor-fusion-tutorial/blob/master/01%20-%20ROS%20and%20Sensor%20Fusion%20Tutorial.md](https://github.com/methylDragon/ros-sensor-fusion-tutorial/blob/master/01 - ROS and Sensor Fusion Tutorial.md)
+5. https://adioshun.gitbooks.io/kalmanfilter/article/KalmanFilterbasics.html
 
 
-
-no.2 is really good and I am using it right now to understand a lot of things.
-
-wikipedia is really good too!
