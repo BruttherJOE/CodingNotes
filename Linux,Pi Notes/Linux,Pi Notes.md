@@ -44,6 +44,9 @@ This gives you several options to tinker with. They are namely, but not limited 
  - ssh
  - i2c
  - spi
+ 
+ ### Config joystick
+ http://wiki.ros.org/joy/Tutorials/ConfiguringALinuxJoystick
 
 
 ### MFRC522
