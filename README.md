@@ -54,4 +54,4 @@ Content in the first column | Content in the second column
 make an ./assets folder. link your picture onto your .md file with this link location  
 `![this_does_not_matter](./assets/<your_picture_name_and_extension.jpg>)`
 
-
+Important info, remember that the link itself on github cannot have any spaces (use underscores `_` )
