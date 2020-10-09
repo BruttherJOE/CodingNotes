@@ -55,3 +55,14 @@ make an ./assets folder. link your picture onto your .md file with this link loc
 `![this_does_not_matter](./assets/<your_picture_name_and_extension.jpg>)`
 
 Important info, remember that the link itself on github cannot have any spaces (use underscores `_` )
+
+
+### Subscript and superscript
+This is some <sup>superscript</sup> text.
+
+This is some <sub>subscript</sub> text.
+```
+This is some <sup>superscript</sup> text.
+
+This is some <sub>subscript</sub> text.
+```
