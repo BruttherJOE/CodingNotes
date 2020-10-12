@@ -39,8 +39,8 @@ First Header | Second Header
 ------------ | -------------
 Content from cell 1 | Content from cell 2
 Content in the first column | Content in the second column
-
-
+<br/>
+<br/>
 ### Inline code
 
 `inline code`
@@ -49,14 +49,15 @@ Content in the first column | Content in the second column
 ```
 `this inlines the code`
 ```
-
+<br/>
 ### Pictures
 make an ./assets folder. link your picture onto your .md file with this link location  
 `![this_does_not_matter](./assets/<your_picture_name_and_extension.jpg>)`
 
 Important info, remember that the link itself on github cannot have any spaces (use underscores `_` )
-
-
+<br/>
+<br/>
+## HTML STUFF (Git supports this!)
 ### Subscript and superscript
 This is some <sup>superscript</sup> text.
 
@@ -65,4 +66,10 @@ This is some <sub>subscript</sub> text.
 This is some <sup>superscript</sup> text.
 
 This is some <sub>subscript</sub> text.
+```
+<br/>
+
+### Line breaks
+```
+<br/> : breaks a line
 ```
