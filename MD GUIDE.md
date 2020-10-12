@@ -75,3 +75,9 @@ This is some <sub>subscript</sub> text.
 ```
 <br/> : breaks a line
 ```
+### Aligning images
+```
+<p align="center">
+  <img width="460" height="300" src="http://www.fillmurray.com/460/300">
+</p>
+```
