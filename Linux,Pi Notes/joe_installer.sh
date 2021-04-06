@@ -9,7 +9,7 @@ python3-pip"
 
 
 # Install Packages
-PACKAGES=python-pip python3-pip"
+PACKAGES="python-pip python3-pip"
 apt-get update
 apt-get upgrade -y
 apt-get install $PACKAGES -y
