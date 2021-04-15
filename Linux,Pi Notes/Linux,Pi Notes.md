@@ -44,7 +44,7 @@ This gives you several options to tinker with. They are namely, but not limited 
  - ssh
  - i2c
  - spi
- 
+
  ### Config joystick
  http://wiki.ros.org/joy/Tutorials/ConfiguringALinuxJoystick
 
@@ -96,6 +96,82 @@ The solution is to use -E with sudo to pass on those environment variables to th
   do everything with `sudo -E`
 
 ____________________________
+
+### RPI GPIO
+
+https://learn.sparkfun.com/tutorials/raspberry-gpio/python-rpigpio-api
+
+put this at the top of your python file
+
+```
+import RPi.GPIO as GPIO
+GPIO.setmode(GPIO.BCM) #use conventional io numbering system
+```
+
+### declaring pins
+
+```
+GPIO.setup(18, GPIO.OUT)
+```
+
+### digital output
+
+```
+GPIO.output(18, GPIO.HIGH)
+```
+
+high sets pin to 3.3v, low sets it to 0v
+
+
+
+
+
+### pwm analog
+
+only one pin is capable of this madness. this is pin18. pwm takes a value in from 0-100.
+
+`GPIO.PWM(<pin>, <frequency>)`
+
+
+
+```
+pwm = GPIO.PWM(18, 1000)
+# sets pwm up with frequency of 1khz on pin 18
+pwm.start(50)
+# outputs 50% duty cycle
+```
+
+to change duty cycle mid code, 
+
+```
+pwm.ChangeDutyCycle(75)
+```
+
+
+
+to stop pwm,
+
+```
+pwm.stop()
+```
+
+
+
+### Pull up/ Pull down Resistors
+
+RPI has an inbuilt pud resistor. usually used for buttons or inputs in general
+
+```
+GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+```
+
+```
+GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+```
+
+
+
+
 
 
 
@@ -275,5 +351,4 @@ This is very useful!
 
 `git log` shows file edit history
 
-`git push origin` push to origin ?????
-
+`git push origin` push to origin 
