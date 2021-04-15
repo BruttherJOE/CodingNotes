@@ -171,6 +171,18 @@ GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 
 
+### PINOUT
+
+RPI allows you to see its pinout conventions with a command in terminal. This is made available by `GPIO Zero` library.
+
+```
+pinout
+```
+
+<p align="center">
+  <img width="auto" height="auto" src="./assets/pinout.png">
+</p>
+
 
 
 
