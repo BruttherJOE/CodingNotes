@@ -41,6 +41,7 @@ append this at the bottom of your bashrc, does not matter where.
 alias bashrc='gedit ~/.bashrc'
 alias srcbashrc='source ~/.bashrc'
 alias dl='curl -LJO'
+alias temp='/opt/vc/bin/vcgencmd measure_temp'
 ```
 
 
