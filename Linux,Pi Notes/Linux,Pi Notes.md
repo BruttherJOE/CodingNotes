@@ -213,6 +213,8 @@ pinout
 
 `cat` displays in terminal the contents of a .py or .txt file. For example, `cat pose_estimator.py`
 
+`history` shows you the bash history - a list of commands executed previously
+
 
 
 ### `mv` Move
@@ -364,3 +366,18 @@ This is very useful!
 `git log` shows file edit history
 
 `git push origin` push to origin 
+
+
+## NVIDIA DRIVERS AND CUDA
+
+To check if installed :
+```
+nvcc --version    # cuda
+nvidia-smi        # nvidia drivers
+```
+
+To install :
+```
+ubuntu-drivers devices                # check what drivers are available for the graphics card
+sudo apt install nvidia-driver-535    # install the latest or recomended driver version. at the time of writing, its 535
+```
