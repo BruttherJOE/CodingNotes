@@ -525,4 +525,28 @@ The reason this error occurs is because Python packages in /opt are added to PYT
 export PYTHONPATH=$PYTHONPATH:/usr/lib/python2.7/dist-packages
 ```
 
+## comms between ros
+
+To find out your computer's IP address, run `hostname -I`.
+
+Before running `roscore`, append the following to the bashrc or zshrc on the master computer:
+
+```
+export ROS_MASTER_URI=http://localhost:11311/
+export ROS_HOSTNAME=192.168.36.220 #rosmaster IP
+export ROS_IP=192.168.36.220 #rosmaster IP
+```
+
+Run `roscore` on the master.
+
+Now, append the following to the slave's bashrc or zshrc:
+
+```
+export ROS_MASTER_URI=http://192.168.36.220:11311/ #rosmaster IP
+export ROS_HOSTNAME=192.168.36.60 #slave IP
+export ROS_IP=192.168.36.60 #slave IP
+```
+
+`rostopic list` to see if topics are connected
+
 
